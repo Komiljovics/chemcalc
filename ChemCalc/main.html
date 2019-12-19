@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kémia számoló</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <script async src="main.js"></script>
+</head>
+<body>
+    <div class="Header">
+        <h1>Kémia számoló</h1>
+    </div>
+    <form class="form" onsubmit="calc(event)">
+        <div class="form-group">
+            <label>Tömegszázalék(m%)</label>
+            <input type="number" name="Tömegszázalék" id="tsz">
+            <input type="radio" name="tsz" id="radio-tsz" onclick="selectTsz()">
+        </div>
+        <div class="form-group">
+                <label>Oldott anyag(m o.a.)</label>
+                <input type="number" name="Oldott anyag" id="oa">
+                <input type="radio" name="tsz" id="radio-oa" onclick="selectOa()">
+            </div>
+        <div class="form-group">
+            <label>Oldószer(m osz.)</label>
+            <input type="number" name="Oldószer" id="osz">
+            <input type="radio" name="tsz" id="radio-osz" onclick="selectOsz()">
+        </div>
+        <div class="form-group">
+                <label>Oldat(m o.)</label>
+                <input type="number" name="Oldat" id="o">
+                <input type="radio" name="tsz" id="radio-o" onclick="selectO()">
+            </div>
+        <input type="submit" value="Számolj!">
+    </form>
+    <div class="Calc">
+        <h1 id="result-header"></h1>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
